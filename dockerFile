@@ -1,8 +1,17 @@
 FROM node
 WORKDIR /code
-COPY package.json .
+
+COPY . .
+#COPY package.json .
+
 RUN npm install --silent
-COPY index.js .
-COPY ./test/ /code/test
+
+ENV NODE_PATH=.
 EXPOSE 3000
-CMD ["node","index.js"]
+
+CMD ["node","run.js"]
+
+#Bæta við export path
+#keyra vantar runþjs file inn
+#export PATH=~/opt/bin:$PATH
+# RUN export PATH=$PATH:~/opt/bin:~/opt/node/bin

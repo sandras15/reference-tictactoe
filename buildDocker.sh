@@ -46,7 +46,7 @@ cp ./createDB.sh ./build/
 cd build                    #Accsess the build folder
 echo Building docker image  #Write the message "Building docker image"
 
-docker build -t sandras15/tictactoe .  #Build the image sandras15/tictactoe
+docker build -t sandras15/tictactoe:$GIT_COMMIT .  #Build the image sandras15/tictactoe
 
 rc=$?
 if [[ $rc != 0 ]] ; then
@@ -54,7 +54,7 @@ if [[ $rc != 0 ]] ; then
     exit $rc
 fi
 
-docker push sandras15/tictactoe       #Push the image to DockerHub
+docker push sandras15/tictactoe:$GIT_COMMIT       #Push the image to DockerHub
 rc=$?
 if [[ $rc != 0 ]] ; then
     echo "Docker push failed " $rc

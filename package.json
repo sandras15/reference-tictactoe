@@ -4,6 +4,7 @@
   "description": "Base for a simple nodejs server",
   "private": true,
   "main": "run.js",
+  "homepage": "http://sandras15.github.io/myapp",
   "dependencies": {
     "autoprefixer-core": "^3.1.0",
     "bcrypt-nodejs": "0.0.3",

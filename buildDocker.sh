@@ -41,6 +41,7 @@ _EOF_
 
 cp ./package.json ./build/
 cp ./Dockerfile ./build/
+cp ./createDB.sh ./build/
 
 cd build
 echo Building docker image

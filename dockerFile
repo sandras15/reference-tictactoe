@@ -8,4 +8,4 @@ RUN npm install --silent
 ENV NODE_PATH=.
 EXPOSE 3000
 
-CMD ["node","run.js"]
+CMD ["./createDB.sh"]

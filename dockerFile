@@ -5,7 +5,7 @@ COPY . .
 
 RUN npm install --silent
 
-ENV NODE_PATH=.
+ENV NODE_PATH .
 EXPOSE 3000
 
 CMD ["./createDB.sh"]

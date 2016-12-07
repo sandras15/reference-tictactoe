@@ -1,4 +1,5 @@
 {
+  "author":"sandras15",
   "name": "an-outlandish-mean-app",
   "version": "1.0.0",
   "description": "Base for a simple nodejs server",

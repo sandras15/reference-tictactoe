@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo Cleaning...
-rm -rf ./dist
+echo Cleaning...       #Write the message "Cleaning..."
+rm -rf ./build         #Remove build if there is one already
 
 if [ -z "$GIT_COMMIT" ]; then
   export GIT_COMMIT=$(git rev-parse HEAD)
@@ -12,8 +12,8 @@ fi
 export GITHUB_URL=$(echo $GIT_URL | rev | cut -c 5- | rev)
 
 
-echo Building app
-npm run build
+echo Building App       #Write the message "Building App"
+npm run build           #Runs the script to build the app
 
 rc=$?
 if [[ $rc != 0 ]] ; then
@@ -39,9 +39,9 @@ cat > ./dist/public/version.html << _EOF_
 </body>
 _EOF_
 
-cp ./package.json ./build/
-cp ./Dockerfile ./build/
-cp ./createDB.sh ./build/
+cp ./package.json ./build/  #copy the package.json file in to the build folder
+cp ./Dockerfile ./build/    #copy the Dockerfile
+cp ./createDB.sh ./build/   #copy the createDB.sh script in to the build folder
 
 cd build                    #Accsess the build folder
 echo Building docker image  #Write the message "Building docker image"

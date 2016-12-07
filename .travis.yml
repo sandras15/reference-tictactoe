@@ -7,5 +7,5 @@ node_js:
   - "0.6"
   - "iojs"
 
-npm test
-npm install
+#npm test
+#npm install

@@ -2,18 +2,18 @@ version: '2'
 services:
   server:
     environment:
-      - 'POSTGRES_HOST=postgres'
-      - 'POSTGRES_PORT=5432'
-      - 'PORT=3000'
-    image: 'sandras15/tictactoe'
+      - 'POSTGRES_HOST=postgres'              #
+      - 'POSTGRES_PORT=5432'                  #Postgres port is 5432
+      - 'PORT=3000'                           #Port for
+    image: 'sandras15/tictactoe'              #The Docker image
     depends_on:
-      - postgres
+      - postgres                              #Connects server and postgres
     ports:
-      - "3000:3000"
-      - "8080:8080"
+      - "3000:3000"                           #
+      - "8080:8080"                           #
   postgres:
-    image: postgres
+    image: postgres                           #
     environment:
-      - 'POSTGRES_PASSWORD=mysecretpassword'
+      - 'POSTGRES_PASSWORD=mysecretpassword'  #
     ports:
-      - "5432:5432"
+      - "5432:5432"                           #

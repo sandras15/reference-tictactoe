@@ -21,12 +21,13 @@ if [[ $rc != 0 ]] ; then
     exit $rc
 fi
 
+mkdir ./build/public/   #Create folder
 
-cat > ./dist/githash.txt <<_EOF_
+cat > ./build/githash.txt <<_EOF_
 $GIT_COMMIT
 _EOF_
 
-cat > ./dist/public/version.html << _EOF_
+cat > ./build/public/version.html << _EOF_
 <!doctype html>
 <head>
    <title>App version information</title>

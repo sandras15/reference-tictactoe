@@ -1,11 +1,12 @@
 FROM node
 WORKDIR /code
 
-COPY . .
+COPY . .					#Copy everyting from my current directory to image
+							
+RUN npm install --silent	#Run the install for npm and do it silently so you don't see alot of text on your screen.
 
-RUN npm install --silent
+ENV NODE_PATH .				#Environment variable that? ??? ATH
+EXPOSE 3000					#Expose on port 3000.
 
-ENV NODE_PATH .
-EXPOSE 3000
-
-CMD ["./createDB.sh"]
+CMD ["./createDB.sh"]		#Run the script "./createDB.sh" to connect it with the database.
+							#The ./createDB.sh script runs two other scripts, first migratedb and then run.js.

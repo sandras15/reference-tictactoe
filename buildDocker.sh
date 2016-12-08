@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo Installing npm...       ##Write the message "Installing npm..."
 sudo npm install -g nodemon  #Install at first
 npm install
 

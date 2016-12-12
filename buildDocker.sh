@@ -5,7 +5,7 @@
 #npm install
 
 echo Cleaning...       #Write the message "Cleaning..."
-#rm -rf ./build         #Remove build if there is one already
+rm -rf ./build         #Remove build if there is one already
 
 if [ -z "$GIT_COMMIT" ]; then
   export GIT_COMMIT=$(git rev-parse HEAD)

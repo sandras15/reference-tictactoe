@@ -3,7 +3,7 @@ services:
   server:
     environment:
       - 'PGPOST=NODE_ENV'                       #Production
-      - 'PGPORT=5432'                           #Postgres port is 5432
+      - 'POSTGRES_PORT=5432'                    #Postgres port is 5432
       - 'PORT=80'                               #Port for AWS
     image: 'sandras15/tictactoe:${GIT_COMMIT}'  #The Docker image with git commit tag
     depends_on:

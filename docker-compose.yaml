@@ -2,9 +2,9 @@ version: '2'
 services:
   server:
     environment:
-      - PGPOST=NODE_ENV                       #Production
-      - POSTGRES_PORT=5432                    #Postgres port is 5432
-      - PORT=80                               #Port for AWS
+      - PGPOST=NODE_ENV                         #Production
+      - POSTGRES_PORT=5432                      #Postgres port is 5432
+      - PORT=80                                 #Port for AWS
     image: 'sandras15/tictactoe:${GIT_COMMIT}'  #The Docker image with git commit tag
     depends_on:
       - postgres                                #Connects server and postgres
@@ -14,7 +14,20 @@ services:
   postgres:
     image: postgres                             #Image for postgres
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mysecretpassword    #Password for postgres
+      - POSTGRES_USER=postgres                  #User for postgres
+      - POSTGRES_PASSWORD=mysecretpassword      #Password for postgres
     ports:
       - "5432:5432"                             #Postgres port
+  web:
+    build: .
+    ports:
+    - "5000:5000"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}

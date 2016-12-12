@@ -1,0 +1,41 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'build' ]
+info using npm@1.1.0-2
+info using node@v0.6.8
+verbose config file /home/ec2-user/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose caching /home/ec2-user/reference-tictactoe/package.json
+verbose loadDefaults an-outlandish-mean-app@1.0.0
+verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+info prebuild an-outlandish-mean-app@1.0.0
+info build an-outlandish-mean-app@1.0.0
+verbose unsafe-perm in lifecycle true
+silly exec sh "-c" "export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build"
+silly spawning [ 'sh',
+silly spawning   [ '-c',
+silly spawning     'export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build' ],
+silly spawning   '/home/ec2-user/reference-tictactoe' ]
+info an-outlandish-mean-app@1.0.0 Failed to exec build script
+ERR! an-outlandish-mean-app@1.0.0 build: `export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build`
+ERR! `sh "-c" "export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build"` failed with 1
+ERR! 
+ERR! Failed at the an-outlandish-mean-app@1.0.0 build script.
+ERR! This is most likely a problem with the an-outlandish-mean-app package,
+ERR! not with npm itself.
+ERR! Tell the author that this fails on your system:
+ERR!     export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build
+ERR! You can get their info via:
+ERR!     npm owner ls an-outlandish-mean-app
+ERR! There is likely additional logging output above.
+ERR! 
+ERR! System Linux 4.4.23-31.54.amzn1.x86_64
+ERR! command "node" "/usr/local/bin/npm" "run" "build"
+ERR! cwd /home/ec2-user/reference-tictactoe
+ERR! node -v v0.6.8
+ERR! npm -v 1.1.0-2
+ERR! code ELIFECYCLE
+ERR! message an-outlandish-mean-app@1.0.0 build: `export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build`
+ERR! message `sh "-c" "export NODE_PATH=. && npm run clean && npm run createbuild && npm run buildclient && mv client/build build/static && cp -R server build/server && mkdir -p build/client/src && cp -r client/src/common build/client/src && cp run.js build"` failed with 1
+ERR! errno {}
+verbose exit [ 1, true ]

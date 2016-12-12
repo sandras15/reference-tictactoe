@@ -1,5 +1,5 @@
 {
-  "author":"sandras15",
+  "author": "sandras15",
   "name": "an-outlandish-mean-app",
   "version": "1.0.0",
   "description": "Base for a simple nodejs server",
@@ -20,7 +20,8 @@
     "jshint-brunch": "^1.7.0",
     "parallelshell": "^2.0.0",
     "pg": "^6.1.0",
-    "socket.io": "^1.5.1"
+    "socket.io": "^1.5.1",
+    "spawn-sync": "^1.0.15"
   },
   "devDependencies": {
     "jest": "^17.0.3",

@@ -14,6 +14,7 @@ services:
   postgres:
     image: postgres                             #Image for postgres
     environment:
+      - 'POSTGRES_USER=postgres'
       - 'POSTGRES_PASSWORD=mysecretpassword'    #Password for postgres
     ports:
       - "5432:5432"                             #Postgres port

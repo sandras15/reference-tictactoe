@@ -2,7 +2,10 @@
 
 #echo Installing npm...       ##Write the message "Installing npm..."
 #sudo npm install -g nodemon  #Install at first
-#npm install
+npm install
+cd client
+npm install
+cd ..
 
 echo Cleaning...       #Write the message "Cleaning..."
 rm -rf ./build         #Remove build if there is one already

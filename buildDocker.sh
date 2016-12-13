@@ -2,9 +2,14 @@
 
 #echo Installing npm...       ##Write the message "Installing npm..."
 #sudo npm install -g nodemon  #Install at first
+sudo usermod -aG docker ubuntu
+newgrp docker
+
 npm install
+
 cd client
 npm install
+
 cd ..
 
 echo Cleaning...       #Write the message "Cleaning..."

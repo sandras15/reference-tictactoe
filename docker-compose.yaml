@@ -18,16 +18,3 @@ services:
       - POSTGRES_PASSWORD=mysecretpassword      #Password for postgres
     ports:
       - "5432:5432"                             #Postgres port
-  web:
-    build: .
-    ports:
-    - "5000:5000"
-    volumes:
-    - .:/code
-    - logvolume01:/var/log
-    links:
-    - redis
-  redis:
-    image: redis
-volumes:
-  logvolume01: {}

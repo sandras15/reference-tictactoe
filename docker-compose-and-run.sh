@@ -3,7 +3,7 @@
 set -e 							#Stops the script run if any errors occur.
 
 docker-compose down 			#Stop docker-compose
-if [ -z "$docker rmi" ]; then
+if [ -z "$docker images" ]; then
   export docker rmi $(docker images -q)  #Remove docker images
 fi
 docker-compose up -d 			#Run docker-compse

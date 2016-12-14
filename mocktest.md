@@ -1,16 +1,15 @@
 #Mock Tests for TicTacToe <br />
-###Board <br />
 
     | 1 | 2 | 3 |
     -------------
-    | 4 | 5 | 6 |
+    | 4 | 5 | 6 |    =   BOARD
     -------------
     | 7 | 8 | 9 |
 
-If our bord would look like this we can consiter the scenarios of. <br />
-...1. __Win__ - If eather X or O have 3 of their symbols in a row we have a win.  <br />
-...2. __Draw__ - If there is nobody that wins  <br />
-...3. __Illegal Move__ - If there is already a symbol in the place you want to put your symbol.  <br />
+###If our bord would look like the here above we can consiter the scenarios of. <br />
+1. __Win__ - If eather X or O have 3 of their symbols in a row we have a win.  <br />
+2. __Draw__ - If there is nobody that wins  <br />
+3. __Illegal Move__ - If there is already a symbol in the place you want to put your symbol.  <br />
 
 
 ##Winning scenarios could be one of the following: <br />

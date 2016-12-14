@@ -15,15 +15,12 @@ exports.setup = function(options, seedLink) {
 };
 
 exports.up = function(db,callback) {
-  db.createTable('commandlog', {
-    timestamp:{ type:'datetime'},
-    id: { type: 'string', primaryKey: true },
-    json: 'string'
-  }, callback);};
-
-exports.down = function(db) {
-  db.dropTable('commandlog', callback);
+  db.addColumn('eventlog', 'aggregate_id'{ 
+    type: 'string'
+  }, 
+  callback);
 };
+
 
 exports._meta = {
   "version": 1

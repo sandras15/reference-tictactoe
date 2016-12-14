@@ -1,10 +1,10 @@
 #Mock Tests for TicTacToe <br />
 
-                      | 1 | 2 | 3 |
-                      -------------
-          BOARD    =  | 4 | 5 | 6 |   
-                      -------------
-                      | 7 | 8 | 9 |
+                           | 1 | 2 | 3 |
+                           -------------
+            BOARD    =     | 4 | 5 | 6 |   
+                           -------------
+                           | 7 | 8 | 9 |
 
 ###If our bord would look like the here above we can consiter the scenarios of. <br />
 1. __Win__ - If eather X or O have 3 of their symbols in a row we have a win.  <br />

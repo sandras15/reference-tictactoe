@@ -33,6 +33,10 @@ fi
 
 mkdir ./build/public/   #Create folder
 
+cat > ./build/.env <<_EOF_
+GIT_COMMIT=$GIT_COMMIT
+_EOF_
+
 cat > ./build/githash.txt <<_EOF_
 $GIT_COMMIT
 _EOF_

@@ -56,7 +56,7 @@ _EOF_
 
 cp ./package.json ./build/  #copy the package.json file in to the build folder
 cp ./Dockerfile ./build/    #copy the Dockerfile
-cp ./createDB.sh ./build/   #copy the createDB.sh script in to the build folder
+cp ./Scripts/createDB.sh ./build/   #copy the createDB.sh script in to the build folder
 
 cd build                    #Accsess the build folder
 echo Building docker image  #Write the message "Building docker image"

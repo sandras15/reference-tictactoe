@@ -21,7 +21,7 @@ EXPOSE 80
 #Expose on port 80.
 
 
-CMD ["./createDB.sh"]		
+CMD ["./Scripts/createDB.sh"]		
 
-#Run the script "./createDB.sh" to connect it with the database.
+#Run the script "./createDB.sh" in the folder Scripts, to connect it with the database.
 #The ./createDB.sh script runs two other scripts, first migratedb and then run.js.

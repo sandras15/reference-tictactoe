@@ -1,16 +1,16 @@
-#Test Examples
+#Test Examples <br />
 
-When you have given-events/when-command/then-events scenarios for at least the following:
+When you have given-events/when-command/then-events scenarios for at least the following: 
 
-##1. Create game command
-__Given:__ That a game has yet not been created.
-__When:__ A game is created and
-__Then:__ You can play game.
+##1. Create game command <br />
+__Given:__ That a game has yet not been created. <br />
+__When:__ A game is created and <br />
+__Then:__ You can play game. <br />
 
 
  *    should emit game created event
 
-##2. Join game command
+##2. Join game command <br />
 __Given:__ 
 __When:__
 __Then:__ 
@@ -19,9 +19,9 @@ __Then:__
  *    should emit FullGameJoinAttempted when game full
 
 
-##3. Place move command
-__Given:__ There has been a game created. There are two players in the game and no one has made their move.
-__When:__ The first player makes his move, his symbol(X or O) is placed in the spot the player picked.
+##3. Place move command <br />
+__Given:__ There has been a game created. There are two players in the game and no one has made their move. <br />
+__When:__ The first player makes his move, his symbol(X or O) is placed in the spot the player picked. <br />
 __Then:__ The next player can make their move.
 
  *    should emit MovePlaced on first game move
@@ -31,57 +31,57 @@ __Then:__ The next player can make their move.
  *    Should not emit game draw if won on last move
  *    Should emit game draw when neither wins <case x>
 
-##4. Illegal move command
+##4. Illegal move command <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##5. Legal move command
+##5. Legal move command <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##6. Illegal turn
+##6. Illegal turn <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##7. Legal turn
+##7. Legal turn <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##8. Win scenario
+##8. Win scenario <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##9. Draw scenario
+##9. Draw scenario <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##10. 
+##10. <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##11. 
+##11. <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##12. 
+##12. <br />
 __Given:__ 
 __When:__
 __Then:__ 
 
-##13. 
+##13. <br />
 __Given:__ 
 __When:__
 __Then:__
 
-##14. 
+##14. <br />
 __Given:__ 
 __When:__
 __Then:__  

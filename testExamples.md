@@ -11,9 +11,9 @@ __Then:__ You can play game. <br />
  *    should emit game created event
 
 ##2. Join game command <br />
-__Given:__ <br />
-__When:__ <br />
-__Then:__  <br />
+* __Given:__ <br />
+* __When:__ <br />
+* __Then:__  <br />
 
  *    should emit game joined event
  *    should emit FullGameJoinAttempted when game full

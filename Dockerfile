@@ -3,7 +3,7 @@ WORKDIR .
 
 COPY . .
 
-Copy everyting from my current directory to image			
+#Copy everyting from my current directory to image			
 	
 
 ENV NODE_PATH .			

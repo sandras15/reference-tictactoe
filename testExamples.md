@@ -7,9 +7,9 @@
 		                           | (2,0) | (2,1) | (2,3) |
 
 ##Form for the test examples:
-	* Given [Events], 
-	* When [Command]
-	* Then [Resulting Event(s)]
+* Given [Events], 
+* When [Command]
+* Then [Resulting Event(s)]
 
 
 

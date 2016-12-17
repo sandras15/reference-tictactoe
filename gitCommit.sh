@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Updated testExamples.md"
+git commit -m "testExamples.md DONE!"
 git push origin master

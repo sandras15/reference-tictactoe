@@ -3,9 +3,9 @@
 When you have given-events/when-command/then-events scenarios for at least the following: 
 
 ##1. Create game command <br />
-__Given:__ That a game has yet not been created. <br />
-__When:__ A game is created and <br />
-__Then:__ You can play game. <br />
+* __Given:__ That a game has yet not been created. <br />
+* __When:__ A game is created and <br />
+* __Then:__ You can play game. <br />
 
 
  *    should emit game created event

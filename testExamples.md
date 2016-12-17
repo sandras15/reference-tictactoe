@@ -14,12 +14,15 @@
 
 
 ##1. Create game command <br />
+
+###Game created
 * __Given:__ That a game has yet not been created. <br />
 * __When:__ Button is pushed "Create new game". <br />
 * __Then:__ A new game will be greated. <br />
 
 
 ##2. Join game command scenarios: <br />
+
 ###Join available game
 * __Given:__ A game has been created. <br />
 * __When:__ Button is pushed "Join game". <br />
@@ -31,7 +34,7 @@
 * __Then:__  [FullGameJoinAttempted] Error message will be displayed "Unavailable game - It already has two players."<br />
 	 
 
-##4. Move command scenarios: <br />
+##3. Move command scenarios: <br />
 
 ###Place move command <br />
 * __Given:__ There has been a game created. There are two players in the game and no one has made their move. <br />
@@ -102,121 +105,103 @@
 * __When:__ [Place(0,1,O)] <br />
 * __Then:__ [MovePlaced(0,1,O)]
 
-##Winning scenarios:
+##4. Winning scenarios:
 
 ###'X' wins horizontally "--" in first row <br />
 * __Given:__ [ Placed(0,0,X), Placed(0,1,X) ] <br />
 * __When:__ [ Place(0,2,X) ] <br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
 ### 'X' wins horizontally "--" in second row <br />
 * __Given:__ [ Placed(1,0,X), Placed(1,1,X) ] <br />
 * __When:__ [ Place(1,2,X) ] <br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
 ### 'X' wins horizontally "--" in third row <br />
 * __Given:__ [ Placed(2,0,X), Placed(2,1,X) ] <br />
 * __When:__ [ Place(2,2,X) ] <br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
 ### 'O' wins horizontally "--" in first row <br />
 * __Given:__ [ Placed(0,0,O), Placed(0,1,O) ] <br />
 * __When:__ [ Place(0,2,O) ] <br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
 ### 'O' wins horizontally "--" in second row <br />
 * __Given:__ [ Placed(1,0,X), Placed(1,1,X) ] <br />
 * __When:__ [ Place(1,2,X) ] <br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
 ### 'O' wins horizontally "--" in third row <br />
 * __Given:__ [ Placed(2,0,O), Placed(2,1,O) ] <br />
 * __When:__ [ Place(2,2,O) ] <br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
 ### 'X' wins vertically "|" in first column<br />
 * __Given:__ [ Placed(0,0,X), Placed(0,2,X) ] <br />
 * __When:__ [ Place(0,2,X) ]<br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
 ### 'X' wins vertically "|" in second column<br />
 * __Given:__ [ Placed(1,0,X), Placed(1,2,X) ] <br />
 * __When:__ [ Place(1,2,X) ]<br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
 ### 'X' wins vertically "|" in third column<br />
 * __Given:__ [ Placed(2,0,X), Placed(2,2,X) ] <br />
 * __When:__ [ Place(2,2,X) ]<br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
 ### 'O' wins vertically "|" in first column<br />
 * __Given:__ [ Placed(0,0,O), Placed(0,2,O) ] <br />
 * __When:__ [ Place(0,2,O) ]<br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
 ### 'O' wins vertically "|" in second column<br />
 * __Given:__ [ Placed(1,0,O), Placed(1,2,O) ] <br />
 * __When:__ [ Place(1,2,O) ]<br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
 ### 'O' wins vertically "|" in third column<br />
 * __Given:__ [ Placed(2,0,O), Placed(2,2,O) ] <br />
 * __When:__ [ Place(2,2,O) ]<br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
-##'X' wins sideways "\" <br />
+###'X' wins sideways "\" <br />
 * __Given:__ [ Placed(0,0,X), Placed(2,2,X) ] <br />
 * __When:__ [ Place(1,1,X) ]<br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
 
-##'O' wins sideways "\" <br />
+###'O' wins sideways "\" <br />
 * __Given:__ [ Placed(0,0,O), Placed(2,0,O) ] <br />
 * __When:__ [ Place(1,1,O) ]<br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
-
-##'X' wins sideways "/" <br />
+###'X' wins sideways "/" <br />
 * __Given:__ [ Placed(0,2,X), Placed(2,0,X) ] <br />
 * __When:__ [ Place(1,1,X) ]<br />
 * __Then:__ [ X Won ] <br />
 
-------------------------
-
-##'O' wins sideways "/" <br />
+###'O' wins sideways "/" <br />
 * __Given:__ [ Placed(0,2,O), Placed(2,0,O) ] <br />
 * __When:__ [ Place(1,1,O) ]<br />
 * __Then:__ [ O Won ] <br />
 
-------------------------
 
-##Draw scenarios <br />
+##5. Draw scenarios <br />
 
 ###Board is full:
 * __Given:__ [ Placed(0,0,O), Placed(0,1,X), Placed(0,2,O) , Placed(1,0,O), Placed(1,1,X), Placed(1,2,O), Placed(2,1,X), Placed(2,2,O) ] <br />

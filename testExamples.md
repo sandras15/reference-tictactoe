@@ -25,7 +25,7 @@
 * __When:__ Button is pushed "Join game". <br />
 * __Then:__  [GameJoined]<br />
 
-##Join unavailable game(already full) <br />
+###Join unavailable game(already full) <br />
 * __Given:__ A game has been created. Two player have already joind the game. <br />
 * __When:__ Button is pushed "Join game". <br />
 * __Then:__  [FullGameJoinAttempted] Error message will be displayed "Unavailable game - It already has two players."<br />

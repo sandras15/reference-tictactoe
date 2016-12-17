@@ -7,7 +7,7 @@
 			                           | (2,0) | (2,1) | (2,3) |
 
 ###Form for the test examples:
-* Given [Events], 
+* Given [Events]
 * When [Command]
 * Then [Resulting Event(s)]
 

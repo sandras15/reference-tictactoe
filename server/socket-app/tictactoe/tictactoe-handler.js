@@ -19,7 +19,7 @@ module.exports = function(injected){
                             user: cmd.user,
                             name: cmd.name,
                             timeStamp: cmd.timeStamp,
-                            side:'X'
+                            side:"X"
                         }]);
 
                     },
@@ -41,7 +41,7 @@ module.exports = function(injected){
                             user: cmd.user,
                             name: cmd.name,
                             timeStamp: cmd.timeStamp,
-                            side:'O'
+                            side:"O"
                         }]);
                     },
                     "PlaceMove": function(cmd){

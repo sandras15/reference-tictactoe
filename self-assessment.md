@@ -1,13 +1,3 @@
-1. Jenkins URL and username and password.
-* __URL:__ http://82.221.49.109:8080/
-* username: sandras15
-* pw: 1a7363603599409795ca8dae57b9c15a
-
-2. Game URL (AWS)
-* http://35.165.28.215/
-
-
-
 ## Scripts
 
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be

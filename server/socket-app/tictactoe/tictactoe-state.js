@@ -28,6 +28,9 @@ module.exports = function (injected) {
 
         processEvents(history);
 
+        function gameFull(){
+            return FullGameJoinAttempted;
+        }
 
         function switchPlayers(event) {
             //Change players after each turn.
@@ -122,10 +125,10 @@ module.exports = function (injected) {
 
 
         return {
-            processEvents: processEvents
-            illegalTurn: illegalTurn
-            illegalMove: illegalMove
-            winScenarios: winScenarios
+            processEvents: processEvents,
+            illegalTurn: illegalTurn,
+            illegalMove: illegalMove,
+            winScenarios: winScenarios,
             drawScenarios: drawScenarios
         }
     };

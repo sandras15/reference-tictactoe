@@ -9,3 +9,4 @@ fi
 docker-compose up -d 			#Run docker-compse
 
 exit 0							#Exit status 0 if succsess, otherwise it will exit with another exitcode. 0 = Good, 1 = Bad
+

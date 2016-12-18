@@ -1,6 +1,10 @@
 1. Jenkins URL and username and password.
+* __URL:__ http://82.221.49.109:8080/
+* username: sandras15
+* pw: 1a7363603599409795ca8dae57b9c15a
 
 2. Game URL (AWS)
+* http://35.165.28.215/
 
 
 
@@ -8,13 +12,17 @@
 
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
 
-- Docker build
+- Docker build: buildDocker.sh
 
-- Docker compose
+- Docker compose: docker-compose-and-run.sh
 
-- AWS Provisioning 
+- AWS Provisioning: provision-new-enviroment.sh (Not implemented fully)
 
-- Other scripts
+- Cleaning images:
+
+- Cleaning containers:
+
+- Git Commit script: gitCommit.sh
 
 
 
@@ -30,7 +38,7 @@ Outline what tests you created.
 
 - UI TDD
 
-- Is the game playable?
+- Is the game playable? Nope.
 
 
 
@@ -46,7 +54,7 @@ Did you create a data migration.
 
 Do you have the following Jobs and what happens in each Job:
 
-- Commit Stage
+- Commit Stage: Yes! 
 
 - Acceptance Stage
 

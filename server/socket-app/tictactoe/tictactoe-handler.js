@@ -5,6 +5,7 @@ module.exports = function(injected){
     return function(history){
 
         var gameState = TictactoeState(history);
+        var events[];
 
         return {
             executeCommand: function(cmd, eventHandler){
@@ -46,9 +47,64 @@ module.exports = function(injected){
 
                         // Check here for conditions which prevent command from altering state
 
-                        gameState.processEvents(events);
+                        if(gameState.illegalMove(cmd.pos)){ //Check illegal move func
+                            eventHandler( [{
+                                gameId: cmd.gameId,
+                                type: "IllegalMove",
+                                user: cmd.user,
+                                name: cmd.name,
+                                timeStamp: cmd.timeStamp,
+                                side: cmd.side
+                            }]);
+                            return;
+                        }
+                        if(gameState.illegalTurn(cmd)){ //Check illegal turn func
+                            eventHandler( [{
+                                gameId: cmd.gameId,
+                                type: "IllegalTurn",
+                                user: cmd.user,
+                                name: cmd.name,
+                                timeStamp: cmd.timeStamp,
+                                side: cmd.side
+                            }]);
+                            return;
+                        }
+
+                        events.push([{
+                            gameId: cmd.gameId,
+                            type: "MovePlaced",
+                            user: cmd.user,
+                            name: cmd.name,
+                            timeStamp: cmd.timeStamp,
+                            side: cmd.side,
+                            pos: cmd.pos
+                        }]);
+
+                        gameState.processEvents(events); //Push the pos choosen here above with correct side.
 
                         // Check here for conditions which may warrant additional events to be emitted.
+
+                        if(gameState.winScenarios(cmd)){ //Check for win scenarios
+                            events.push([{
+                                gameId: cmd.gameId,
+                                type: "GameWon",
+                                user: cmd.user,
+                                name: cmd.name,
+                                timeStamp: cmd.timeStamp,
+                                side: cmd.side
+                            }]);
+                        }
+                        else if(gameState.drawScenarios(cmd)){ //Check for draw scenarios
+                            events.push([{
+                                gameId: cmd.gameId,
+                                type: "Draw",
+                                user: cmd.user,
+                                name: cmd.name,
+                                timeStamp: cmd.timeStamp,
+                                side: cmd.side
+                            }]);
+                        }
+
                         eventHandler(events);
                     }
                 };

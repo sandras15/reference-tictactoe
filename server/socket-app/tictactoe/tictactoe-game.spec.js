@@ -211,22 +211,22 @@ describe('move command', function () {
         ];
         when =
         {
-            type: "JoinGame",
+            type: "PlaceMove",
             user: {
-                userName: "Gummi"
+                userName: "TheGuy"
             },
             name: "TheFirstGame",
             timeStamp: "2014-12-02T11:29:29"
         };
         then = [
             {
-                type: "GameJoined",
+                type: "MovePlaced",
                 user: {
-                    userName: "Gummi"
+                    userName: "TheGuy"
                 },
                 name: "TheFirstGame",
                 timeStamp: "2014-12-02T11:29:29",
-                side:'O'
+                side:'X'
             }
         ];
 

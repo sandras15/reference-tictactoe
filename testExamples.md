@@ -78,12 +78,6 @@
 * __When:__ [ Place(0,1,X) ] <br />
 * __Then:__  [MovePlaced(0,1,X)] Move has been placed on the board in the middle and now that box has an X. <br />
 
- *    should emit MovePlaced on first game move
-
-### 'O' has the first move <br />
-* __Given:__ A game has been created. Two players have joined. Board is empty. It is O's turn to move. <br />
-* __When:__ [ Place(0,1,O) ] <br />
-* __Then:__ [MovePlaced(0,1,O)] Move has been placed on the board in the middle and now that box has an O. <br />
 
 ### Illegal turn for 'X' <br />
 * __Given:__ A game has been created. Two players have joined. It is the O's turn to move.<br />

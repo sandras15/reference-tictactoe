@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Updated tests using testExamples.md"
+git commit -m "Day 8 done!"
 git push origin master

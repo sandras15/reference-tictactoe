@@ -346,39 +346,648 @@ describe('move command', function () {
         ];
     });
 
-    it('should emit game won on...', function () {
-
-        
-    });
-
     it('should emit game won horizontally...', function () {
-
-        
+        given = [{
+            type: "GameCreated",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X"
+        },
+        {
+            type: "GameJoined",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "5"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "4"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "1"
+        },
+        ];
+        when =
+        {
+            type: "PlaceMove",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "6"
+        };
+        then = [
+            {
+                type: "MovePlaced",
+                user: {
+                    userName: "TheGuy"
+                    },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "O",
+                pos: "6"
+            },
+            {
+                type: "GameWon", 
+                user: {
+                    userName: "TheGuy"
+                },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "X"
+            }
+        ];
     });
 
     it('should emit game won vertically...', function () {
-
-        
+        given = [{
+            type: "GameCreated",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X"
+        },
+        {
+            type: "GameJoined",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "5"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "2"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "1"
+        },
+        ];
+        when =
+        {
+            type: "PlaceMove",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "8"
+        };
+        then = [
+            {
+                type: "MovePlaced",
+                user: {
+                    userName: "TheGuy"
+                    },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "O",
+                pos: "8"
+            },
+            {
+                type: "GameWon", 
+                user: {
+                    userName: "TheGuy"
+                },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "X"
+            }
+        ]; 
     });
 
     it('should emit game won sideways... " \ "', function () {
-
-       
+        given = [{
+            type: "GameCreated",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X"
+        },
+        {
+            type: "GameJoined",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "5"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "1"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "6"
+        },
+        ];
+        when =
+        {
+            type: "PlaceMove",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "9"
+        };
+        then = [
+            {
+                type: "MovePlaced",
+                user: {
+                    userName: "TheGuy"
+                    },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "O",
+                pos: "9"
+            },
+            {
+                type: "GameWon", 
+                user: {
+                    userName: "TheGuy"
+                },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "X"
+            }
+        ];
     });
 
     it('should emit game won sideways... / ', function () {
-
-        
+        given = [{
+            type: "GameCreated",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X"
+        },
+        {
+            type: "GameJoined",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "5"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "2"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "1"
+        },
+        ];
+        when =
+        {
+            type: "PlaceMove",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "7"
+        };
+        then = [
+            {
+                type: "MovePlaced",
+                user: {
+                    userName: "TheGuy"
+                    },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "O",
+                pos: "7"
+            },
+            {
+                type: "GameWon", 
+                user: {
+                    userName: "TheGuy"
+                },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "X"
+            }
+        ];
     });
 
     it('should not emit game draw if won on last move...', function () {
-
-        
+        given = [{
+            type: "GameCreated",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X"
+        },
+        {
+            type: "GameJoined",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "5"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "2"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "1"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "9"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "4"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "8"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "6"
+        }
+        ];
+        when =
+        {
+            type: "PlaceMove",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "7"
+        };
+        then = [
+            {
+                type: "MovePlaced",
+                user: {
+                    userName: "TheGuy"
+                    },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "O",
+                pos: "7"
+            },
+            {
+                type: "GameWon", 
+                user: {
+                    userName: "TheGuy"
+                },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "X"
+            }
+        ];
     });
 
     it('should emit game draw when neither wins...', function () {
-        
-     
+        given = [{
+            type: "GameCreated",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X"
+        },
+        {
+            type: "GameJoined",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "4"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "5"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "2"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "8"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "9"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "7"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "1"
+        }
+        ];
+        when =
+        {
+            type: "PlaceMove",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "6"
+        };
+        then = [
+            {
+                type: "MovePlaced",
+                user: {
+                    userName: "TheGuy"
+                    },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "O",
+                pos: "6"
+            },
+            {
+                type: "Draw", 
+                user: {
+                    userName: "TheGuy"
+                },
+                name: "TheFirstGame",
+                timeStamp: "2014-12-02T11:29:29",
+                side: "X"
+            }
+        ];
     });
 
     it('should emit IllegalMove when square is already occupied...', function () {

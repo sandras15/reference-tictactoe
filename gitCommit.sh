@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Created testresults.xml"
+git commit -m "Implemented using testExamples.md"
 git push origin master

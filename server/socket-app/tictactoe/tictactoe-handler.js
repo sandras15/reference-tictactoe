@@ -59,7 +59,7 @@ module.exports = function(injected){
                             }]);
                             return;
                         }
-                        if(gameState.illegalTurn(cmd)){ //Check illegal turn func
+                        if(gameState.illegalTurn(cmd.pos)){ //Check illegal turn func
                             eventHandler( [{
                                 gameId: cmd.gameId,
                                 type: "IllegalTurn",

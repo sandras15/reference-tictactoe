@@ -8,9 +8,9 @@ Outline what script files you created and the purpose of each file. Each file sh
 
 - AWS Provisioning: provision-new-enviroment.sh (Not implemented fully)
 
-- Cleaning images:
+- Cleaning images: cleanImages.sh
 
-- Cleaning containers:
+- Cleaning containers: cleanContainers.sh
 
 - Git Commit script: gitCommit.sh
 

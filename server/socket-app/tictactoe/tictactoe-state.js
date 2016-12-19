@@ -50,7 +50,8 @@ module.exports = function (injected) {
         }
 
         function illegalMove(event) {
-            if(board[event.pos] != null){
+            console.debug(board);
+            if(board[event.pos] !== undefined){
                 return true; //Illegal move if there is already an symbol in that pos.
             }
             else if(!(event.pos <= 0 && event.pos >= 8)){
@@ -61,13 +62,13 @@ module.exports = function (injected) {
         }
 
         function winHorizontally(event) {
-            if(board[1] == event.side && board[2] == event.side && board[3] == event.side){
+            if(board[0] == event.side && board[1] == event.side && board[2] == event.side){
                 return true;
             }
-            else if(board[4] == event.side && board[5] == event.side && board[6] == event.side){
+            else if(board[3] == event.side && board[4] == event.side && board[5] == event.side){
                 return true;
             }
-            else if(board[7] == event.side && board[8] == event.side && board[9] == event.side){
+            else if(board[6] == event.side && board[7] == event.side && board[8] == event.side){
                 return true;
             }
             else
@@ -76,13 +77,13 @@ module.exports = function (injected) {
        
         function winVertically(event) {
 
-            if(board[1] == event.side && board[4] == event.side && board[7] == event.side){
+            if(board[0] == event.side && board[3] == event.side && board[6] == event.side){
+                return true;
+            }
+            else if(board[1] == event.side && board[4] == event.side && board[7] == event.side){
                 return true;
             }
             else if(board[2] == event.side && board[5] == event.side && board[8] == event.side){
-                return true;
-            }
-            else if(board[3] == event.side && board[6] == event.side && board[9] == event.side){
                 return true;
             }
             else
@@ -91,10 +92,10 @@ module.exports = function (injected) {
 
         function winSideways(event) {
             //Statement for both ways "/" and "\"!
-            if(board[1] == event.side && board[5] == event.side && board[9] == event.side){
+            if(board[0] == event.side && board[4] == event.side && board[8] == event.side){
                 return true;
             }
-            else if(board[7] == event.side && board[5] == event.side && board[3] == event.side){
+            else if(board[6] == event.side && board[4] == event.side && board[2] == event.side){
                 return true;
             }
             else
@@ -111,13 +112,20 @@ module.exports = function (injected) {
         }
 
         function drawScenarios(event){
-            if(!(winScenarios(event))) //If there are no wins
-            {
-                for (var i = 0; i > 10; i++) {
-                    board[i] != null; //All pos are not null
+            if(!(winScenarios(event))){ //If there are no wins
+                var count = 0;
+                for (var i = 0; i > 9; i++) {
+                    if(board[i] != null){
+                        count++;
+                    }
+                     //All pos are not null
                 };
 
-                return true; //There is a draw
+                if(count == 9){
+                    return true; //There is a draw
+                }
+                else
+                return false;
             }
             else
                 return false; //There was not a draw

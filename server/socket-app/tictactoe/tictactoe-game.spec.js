@@ -373,26 +373,6 @@ describe('move command', function () {
             name: "TheFirstGame",
             timeStamp: "2014-12-02T11:29:29",
             side: "X",
-            pos: "5"
-        },
-        {
-            type: "MovePlaced",
-            user: {
-                userName: "Gummi"
-            },
-            name: "TheFirstGame",
-            timeStamp: "2014-12-02T11:29:29",
-            side: "O",
-            pos: "3"
-        },
-        {
-            type: "MovePlaced",
-            user: {
-                userName: "TheGuy"
-            },
-            name: "TheFirstGame",
-            timeStamp: "2014-12-02T11:29:29",
-            side: "X",
             pos: "4"
         },
         {
@@ -403,7 +383,27 @@ describe('move command', function () {
             name: "TheFirstGame",
             timeStamp: "2014-12-02T11:29:29",
             side: "O",
-            pos: "1"
+            pos: "2"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "TheGuy"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "X",
+            pos: "3"
+        },
+        {
+            type: "MovePlaced",
+            user: {
+                userName: "Gummi"
+            },
+            name: "TheFirstGame",
+            timeStamp: "2014-12-02T11:29:29",
+            side: "O",
+            pos: "0"
         },
         ];
         when =
@@ -415,7 +415,7 @@ describe('move command', function () {
             name: "TheFirstGame",
             timeStamp: "2014-12-02T11:29:29",
             side: "X",
-            pos: "6"
+            pos: "5"
         };
         then = [
             {
@@ -426,7 +426,7 @@ describe('move command', function () {
                 name: "TheFirstGame",
                 timeStamp: "2014-12-02T11:29:29",
                 side: "O",
-                pos: "6"
+                pos: "5"
             },
             {
                 type: "GameWon", 
@@ -975,7 +975,7 @@ describe('move command', function () {
                     },
                 name: "TheFirstGame",
                 timeStamp: "2014-12-02T11:29:29",
-                side: "O",
+                side: "X",
                 pos: "6"
             },
             {
@@ -1040,8 +1040,7 @@ describe('move command', function () {
                 },
                 name: "TheFirstGame",
                 timeStamp: "2014-12-02T11:29:29",
-                side: "O",
-                pos: "5"
+                side: "O"
             }
         ];
     });

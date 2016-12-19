@@ -82,13 +82,14 @@ Jobs:
 - __Commit Stage:__ Yes :smiley:! 
 	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_CommitStage/ 
 	- The following job pulls any changes made to GitHub repository. Then it runs the "Docker Build" script and runs the UnitTests.
-	- Code in configuration:
+	- Code in configuration: <br />
 		./buildDocker.sh
 
 - __Deploy Stage:__ Yes :smiley:!
 	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_Deploy/ 
 	- The following job deploys the image created in the Commit Stage over to the amazon server(AWS) and makes a secure copy of neccasary files over to AWS server also.
 	- Code in configuration: <br />
+<br />
 
 		scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./docker-compose.yaml ec2-user@35.165.28.215:~/docker-compose.yaml
 		scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./.env ec2-user@35.165.28.215:~/.env

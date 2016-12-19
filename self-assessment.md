@@ -61,7 +61,7 @@ Did you create a data migration.
 
 Do you have the following Jobs and what happens in each Job:
 
-- Commit Stage: Yes :simle:! 
+- __Commit Stage:__ Yes :smiley: ! 
 	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_CommitStage/ 
 
 - Deploy Stage: Yes!

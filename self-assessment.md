@@ -1,5 +1,14 @@
-Game URL (AWS)
+#Self Assesment
+
+##Another Repository:
+Here is a link to another repository. The repository is private but Hannes and Guðlaugur have access to it.
+* __URL:__ https://github.com/sandras15/hgop_sandras15
+
+##Game URL (AWS)
 * http://35.165.28.215:80/
+
+##DockerHub Account
+* __URL:__ https://hub.docker.com/u/sandras15/
 
 ## Scripts
 
@@ -23,11 +32,16 @@ Outline what script files you created and the purpose of each file. Each file sh
 - Cleaning containers: _/scripts/removeContainers.sh_
 	- __Purpose:__ 
 
+- Server Run: 
+
+- Connect Database: 
+
 - Git Commit script: _/gitCommit.sh_
 	- __Purpose:__ 
 
 - Docker Connect:  ubuntu@i-f1efa454:~/dockerConnect.sh/
 	- __Purpose:__ Connect the ubuntu machine to Docker.
+
 
 
 

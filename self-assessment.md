@@ -1,3 +1,6 @@
+Game URL (AWS)
+* http://35.165.28.215:80/
+
 ## Scripts
 
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
@@ -14,7 +17,7 @@ Outline what script files you created and the purpose of each file. Each file sh
 - Cleaning images: cleanImages.sh
 	- __Purpose:__ 
 
-- Cleaning containers: cleanContainers.sh
+- Cleaning containers: scripts/cleanContainers.sh
 	- __Purpose:__ 
 
 - Git Commit script: gitCommit.sh
@@ -59,7 +62,7 @@ Do you have the following Jobs and what happens in each Job:
 
 - Capacity Stage
 
-- Other
+- Pipl
 
 
 
@@ -67,11 +70,11 @@ Did you use any of the following features in Jenkins?
 
 - Schedule or commit hooks
 
-- Pipeline
+- Pipeline: Yes!
 
 - Jenkins file
 
-- Test reports
+- Test reports: Yes!
 
 - Other
 

@@ -77,3 +77,6 @@ if [[ $rc != 0 ]] ; then
 fi
 
 echo "Done"
+
+mkdir ./xmltests
+npm run xmltests

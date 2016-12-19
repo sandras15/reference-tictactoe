@@ -61,13 +61,12 @@ Did you create a data migration.
 
 Do you have the following Jobs and what happens in each Job:
 
-- Commit Stage: Yes! 
+- Commit Stage: Yes :simle:! 
+	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_CommitStage/ 
 
-- Acceptance Stage: Nope.
+- Deploy Stage: Yes!
+	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_Deploy/ 
 
-- Capacity Stage: Nope.
-
-- Pipline: Yes!
 
 
 
@@ -77,11 +76,8 @@ Did you use any of the following features in Jenkins?
 
 - Pipeline: Yes!
 
-- Jenkins file
-
 - Test reports: Yes!
 
-- Other
 
 
 

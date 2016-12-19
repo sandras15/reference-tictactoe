@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "updated self assesment"
+git commit -m "updated tests"
 git push origin master

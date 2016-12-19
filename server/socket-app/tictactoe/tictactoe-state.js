@@ -51,11 +51,12 @@ module.exports = function (injected) {
         }
 
         function illegalMove(event) {
+            console.debug(event.pos);
             console.debug(board);
-            if(board[event.pos] == 'X' || board[event.pos] == 'O'){
+            if(board[event.pos] === 'X' || board[event.pos] === 'O'){
                 return true; //Illegal move if there is already an symbol in that pos.
             }
-            else if(!(event.pos <= 0 && event.pos >= 8)){
+            else if(event.pos < 0 || event.pos > 8){
                 return true; //Illegal move if input pos is out of range.
             }
             else
@@ -93,6 +94,7 @@ module.exports = function (injected) {
 
         function winSideways(event) {
             //Statement for both ways "/" and "\"!
+            console.debug(board[1] == event.side);
             if(board[0] == event.side && board[4] == event.side && board[8] == event.side){
                 return true;
             }
@@ -113,10 +115,10 @@ module.exports = function (injected) {
         }
 
         function drawScenarios(event){
-            if(!(winScenarios(event))){ //If there are no wins
+            if(!(winScenarios(event) == true)){ //If there are no wins
                 var count = 0;
-                for (var i = 0; i > 9; i++) {
-                    if(board[i] != null){
+                for (var i = 0; i < 9; i++) {
+                    if(board[i] == "X" || board[i] == "O"){
                         count++;
                     }
                      //All pos are not null
@@ -126,7 +128,7 @@ module.exports = function (injected) {
                     return true; //There is a draw
                 }
                 else
-                return false;
+                    return false;
             }
             else
                 return false; //There was not a draw

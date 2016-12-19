@@ -58,7 +58,6 @@ module.exports = function(injected){
                             }]);
                             return;
                         }
-                        
                         else if(gameState.illegalMove(cmd)){ //Check illegal move func
                             eventHandler( [{
                                 gameId: cmd.gameId,
@@ -72,7 +71,7 @@ module.exports = function(injected){
                         }
                         
 
-                        events.push([{
+                        events.push({
                             gameId: cmd.gameId,
                             type: "MovePlaced",
                             user: cmd.user,
@@ -80,31 +79,31 @@ module.exports = function(injected){
                             timeStamp: cmd.timeStamp,
                             side: cmd.side,
                             pos: cmd.pos
-                        }]);
+                        });
 
                         gameState.processEvents(events); //Push the pos choosen here above with correct side.
 
                         // Check here for conditions which may warrant additional events to be emitted.
 
                         if(gameState.winScenarios(cmd)){ //Check for win scenarios
-                            events.push([{
+                            events.push({
                                 gameId: cmd.gameId,
                                 type: "GameWon",
                                 user: cmd.user,
                                 name: cmd.name,
                                 timeStamp: cmd.timeStamp,
                                 side: cmd.side
-                            }]);
+                            });
                         }
                         else if(gameState.drawScenarios(cmd)){ //Check for draw scenarios
-                            events.push([{
+                            events.push({
                                 gameId: cmd.gameId,
                                 type: "Draw",
                                 user: cmd.user,
                                 name: cmd.name,
                                 timeStamp: cmd.timeStamp,
                                 side: cmd.side
-                            }]);
+                            });
                         }
 
                         eventHandler(events);

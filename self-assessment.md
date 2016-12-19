@@ -64,7 +64,7 @@ Do you have the following Jobs and what happens in each Job:
 - __Commit Stage:__ Yes :smiley:! 
 	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_CommitStage/ 
 
-- Deploy Stage: Yes :smiley:!
+- __Deploy Stage:__ Yes :smiley:!
 	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_Deploy/ 
 
 
@@ -74,9 +74,9 @@ Did you use any of the following features in Jenkins?
 
 - Schedule or commit hooks
 
-- Pipeline: Yes!
+- Pipeline: Yes:smiley:!
 
-- Test reports: Yes!
+- Test reports: Yes:smiley:!
 
 
 

@@ -44,8 +44,8 @@ Outline what tests you created.
 	6. _should emit NotYourMove if attempting to make move out of turn_
 	7. _should emit game won horizontally_
 	8. _should emit game won vertically_
-	9. _should emit game won sideways \ _
-	10. _should emit game won sideways / _
+	9. _should emit game won sideways "\"_
+	10. _should emit game won sideways "/"_
 	11. _should not emit game draw if won on last move_
 	12. _should emit game draw when neither wins_
 	13. _should emit IllegalMove when square is already occupied_

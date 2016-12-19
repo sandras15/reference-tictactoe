@@ -4,7 +4,7 @@
     "**/*[sS]pec.js"
   ],
   "helpers": [
-    "jasmine-setup.js"
+    "jasmine-xmlsetup.js"
   ],
   "stopSpecOnExpectationFailure": true,
   "random": false

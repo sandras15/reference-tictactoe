@@ -41,10 +41,7 @@ Here is a link to another repository. The repository is private but Hannes and G
 
 
 
-
 ## Testing & logic
-
-Outline what tests you created.
 
 - Implemented UnitTests are the following:
 	1. _should emit game created event_
@@ -64,15 +61,13 @@ Outline what tests you created.
 - Unfortunatly the game is not playable :pensive:.
 
 
-
 ## Data migration
 
 Did you create a data migration.
 
 - Migration up and down: Yes!
 	- A new file was created called _2016121412231-add-column-aggregate-id.js_
-	- __Purpose:__ To add a column to the eventlog table that already exists.
-
+	- __Purpose:__ To add a column to the eventlog table that already exists .
 
 
 ## Jenkins
@@ -94,8 +89,6 @@ Jobs:
 		ssh -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ec2-user@35.165.28.215 ./docker-compose-and-run.sh <br />
 
 
-
-
 __I used the following features in Jenkins:__
 - Pipeline :smiley:!
 	- __URL:__ http://82.221.49.109:8080/view/TicTacToe_Pipeline/
@@ -104,11 +97,10 @@ __I used the following features in Jenkins:__
 	- Implemented in TicTacToe_CommitStage. The test resaults are exported to an xml files in the _/xmltests_ folder. The xml files specify the success of the unit tests that have been made. 
 
 
-
 ## Other
 ### Documentation:
-Documents made:
-- This document.
+All documentation are made with markdown syntax.
+- self-assesment.md (This document)
 - mocktest.md
 - testExamples.md
 - cheetsheet.md

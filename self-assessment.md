@@ -12,34 +12,29 @@ Here is a link to another repository. The repository is private but Hannes and G
 
 ## Scripts
 
-Outline what script files you created and the purpose of each file. Each file should be commented. This could be
-
 - __Docker build:__ _/buildDocker.sh_
-	- Purpose:
+	- Purpose: The script builds the project among building an docker image. It also pulls and pushes from/to DockerHub.
 
-- __Docker compose:__ _/scripts/docker-compose.yaml_
-	- Purpose:
+- __Docker compose:__ _/docker-compose.yaml_
+	- Purpose: The yaml file tells the production server how to runs it's image.
 
 - __Docker compose and run:__ _/scripts/docker-compose-and-run.sh_
-	- Purpose: 
+	- Purpose: The script shutsdown docker-compose, erases all images if there are some and then runs docker-compose back up.
 
 - __AWS Provisioning:__ _/provisioning/provision-new-enviroment.sh_ (Not implemented fully)
-	- Purpose:
+	- Purpose: Should create a new instace of aws and be runnable on its own.
 
 - __Cleaning images:__ _/scripts/removeImages.sh_
-	- Purpose:
+	- Purpose: Remove all running images.
 
 - __Cleaning containers:__ _/scripts/removeContainers.sh_
-	- Purpose: 
+	- Purpose: Remove all running containers that may interfear.
 
-- __Server Run:__ _/scripts/runserver.sh_
-	- Purpose:
-
-- __Connect Database:__ _/createDB.sh_
-	-Purpose:
+- __Connect Server and Database:__ _/scripts/createDB.sh_
+	-Purpose: The script is runned from the _/buildDocker.sh_ script when ever there is a new container created from the docker image designed by Dockerfile. It also migrates the server and database and then it runs the run.js with node.
 
 - __Git Commit script:__ _/gitCommit.sh_
-	- __Purpose:__ 
+	- __Purpose:__ Make it easier to cpush to GitHub.
 
 - __Docker Connect:__  _ubuntu@i-f1efa454:~/dockerConnect.sh/_
 	- __Purpose:__ Connect the ubuntu machine to Docker. Found in the root of ubuntu.

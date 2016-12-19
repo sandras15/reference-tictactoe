@@ -91,6 +91,7 @@ if [[ $rc != 0 ]] ; then
 fi
 
 echo "Done"
+cd ..
 
 mkdir ./xmltests
 npm run xmltests

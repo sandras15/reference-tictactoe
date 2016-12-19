@@ -3,16 +3,25 @@
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
 
 - Docker build: buildDocker.sh
+	- __Purpose:__ 
 
 - Docker compose: docker-compose-and-run.sh
+	- __Purpose:__ 
 
 - AWS Provisioning: provision-new-enviroment.sh (Not implemented fully)
+	- __Purpose:__ 
 
 - Cleaning images: cleanImages.sh
+	- __Purpose:__ 
 
 - Cleaning containers: cleanContainers.sh
+	- __Purpose:__ 
 
 - Git Commit script: gitCommit.sh
+	- __Purpose:__ 
+
+- Docker Connect:  
+	- __Purpose:__ 
 
 
 

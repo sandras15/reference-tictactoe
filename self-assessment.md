@@ -20,29 +20,29 @@ Outline what script files you created and the purpose of each file. Each file sh
 - __Docker compose:__ _/scripts/docker-compose.yaml_
 	- Purpose:
 
-- Docker compose and run: _/scripts/docker-compose-and-run.sh_
+- __Docker compose and run:__ _/scripts/docker-compose-and-run.sh_
 	- Purpose: 
 
-- AWS Provisioning: _/provisioning/provision-new-enviroment.sh_ (Not implemented fully)
+- __AWS Provisioning:__ _/provisioning/provision-new-enviroment.sh_ (Not implemented fully)
 	- Purpose:
 
-- Cleaning images: _/scripts/removeImages.sh_
+- __Cleaning images:__ _/scripts/removeImages.sh_
 	- Purpose:
 
-- Cleaning containers: _/scripts/removeContainers.sh_
+- __Cleaning containers:__ _/scripts/removeContainers.sh_
 	- Purpose: 
 
-- Server Run: 
+- __Server Run:__ 
 	- Purpose:
 
-- Connect Database: 
+- __Connect Database:__ 
 	-Purpose:
 
-- Git Commit script: _/gitCommit.sh_
+- __Git Commit script:__ _/gitCommit.sh_
 	- __Purpose:__ 
 
-- Docker Connect:  ubuntu@i-f1efa454:~/dockerConnect.sh/
-	- __Purpose:__ Connect the ubuntu machine to Docker.
+- __Docker Connect:__  ubuntu@i-f1efa454:~/dockerConnect.sh/
+	- __Purpose:__ Connect the ubuntu machine to Docker. Found in the root of ubuntu.
 
 
 

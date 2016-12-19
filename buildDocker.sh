@@ -2,10 +2,11 @@
 
 #echo Installing npm...       ##Write the message "Installing npm..."
 #sudo npm install -g nodemon  #Install at first
-
+rm -rf node_modules
 npm install
 
 cd client
+rm -rf node_modules
 npm install
 
 cd ..

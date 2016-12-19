@@ -1,13 +1,13 @@
 #!/bin/bash
 
-rm -rf node_modules
-npm install
+rm -rf node_modules   #Remove npm from root
+npm install           #Install npm again in root
 
-cd client
-rm -rf node_modules
-npm install
+cd client             #Go to client folder
+rm -rf node_modules   #Remove npm from client
+npm install           #Install npm again in client
 
-cd ..
+cd ..                  #Go out of client folder
 
 echo Cleaning...       #Write the message "Cleaning..."
 rm -rf ./build         #Remove build if there is one already
@@ -53,8 +53,8 @@ cat > ./build/public/version.html << _EOF_
 </body>
 _EOF_
 
-cp ./package.json ./build/  #copy the package.json file in to the build folder
-cp ./Dockerfile ./build/    #copy the Dockerfile
+cp ./package.json ./build/          #copy the package.json file in to the build folder
+cp ./Dockerfile ./build/            #copy the Dockerfile
 cp ./Scripts/createDB.sh ./build/   #copy the createDB.sh script in to the build folder
 
 cd build                    #Accsess the build folder
@@ -76,7 +76,8 @@ if [[ $rc != 0 ]] ; then
 fi
 
 echo "Done"
-cd ..
 
-mkdir ./xmltests
-npm run xmltests
+cd ..               #Go out of the build folder
+
+mkdir ./xmltests    #Create folder called xmltests
+npm run xmltests    #Run script from pacage.json

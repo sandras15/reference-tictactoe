@@ -32,16 +32,16 @@ Outline what script files you created and the purpose of each file. Each file sh
 - __Cleaning containers:__ _/scripts/removeContainers.sh_
 	- Purpose: 
 
-- __Server Run:__ 
+- __Server Run:__ _/scripts/runserver.sh_
 	- Purpose:
 
-- __Connect Database:__ 
+- __Connect Database:__ _/createDB.sh_
 	-Purpose:
 
 - __Git Commit script:__ _/gitCommit.sh_
 	- __Purpose:__ 
 
-- __Docker Connect:__  ubuntu@i-f1efa454:~/dockerConnect.sh/
+- __Docker Connect:__  _ubuntu@i-f1efa454:~/dockerConnect.sh/_
 	- __Purpose:__ Connect the ubuntu machine to Docker. Found in the root of ubuntu.
 
 

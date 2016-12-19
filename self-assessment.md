@@ -36,14 +36,22 @@ Outline what script files you created and the purpose of each file. Each file sh
 Outline what tests you created.
 
 - UnitTests, server logic TDD (Git commit log)
+	- Implemented tests:
+		1. should emit game created event
+		2. should emit game joined event
+		3. should emit FullGameJoinAttempted event when game full
+		4. should emit MovePlaced on first game move
+		5. should emit IllegalMove when square is already occupied
+		6. should emit NotYourMove if attempting to make move out of turn
+		7. should emit game won horizontally
+		8. should emit game won vertically
+		9. should emit game won sideways \
+		10. should emit game won sideways /
+		11. should not emit game draw if won on last move
+		12. should emit game draw when neither wins
+		13. should emit IllegalMove when square is already occupied
 
-- API Acceptance test - fluent API
-
-- Load test loop
-
-- UI TDD
-
-- Is the game playable? Nope.
+- Unfortunatly the game is not playable :pensive:.
 
 
 
@@ -70,22 +78,19 @@ Do you have the following Jobs and what happens in each Job:
 
 
 
-I used the following features in Jenkins:
-- __Pipeline__ :smiley:!
+__I used the following features in Jenkins:__
+- Pipeline :smiley:!
+	- __URL:__ http://82.221.49.109:8080/view/TicTacToe_Pipeline/
 
-- __Test reports__ :smiley:!
-
-
-
-
-## Monitoring
-
-Did you do any monitoring?
-
-- URL to monitoring tool. Must be open or include username and pass.
+- Test reports :smiley:!
+	- Implemented in TicTacToe_CommitStage. The test resaults are exported to an xml files in the _/xmltests_ folder. The xml files specify the success of the server side unit tests that have been made. 
 
 
 
 ## Other
-
-Anything else you did to improve you deployment pipeline of the project itself?
+### Documentation:
+Documents made:
+- This document.
+- mocktest.md
+- testExamples.md
+- cheetsheet.md

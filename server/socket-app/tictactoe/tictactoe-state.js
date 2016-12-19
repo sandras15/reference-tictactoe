@@ -13,7 +13,7 @@ module.exports = function (injected) {
             if(event.type == 'GameCreated'){ //Create a board if the button "Game created" is pushed.
                 board = new Array(9);
             }
-            else if(event.type == 'GameJoined'){ //A game will be marked as full if there are two that have joined a game.
+            else if(event.type === 'GameJoined'){ //A game will be marked as full if there are two that have joined a game.
                 FullGameJoinAttempted = true;
             }
             else if(event.type == 'MovePlaced'){ //When there has been a move placed that is legal, change players turn.

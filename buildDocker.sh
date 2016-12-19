@@ -15,7 +15,8 @@ git clean -dfx
 git stash            
 
 rm -rf node_modules   
-npm install           
+npm install
+npm install jasmine^@2.5.2           
 
 cd client/
 rm -rf node_modules   

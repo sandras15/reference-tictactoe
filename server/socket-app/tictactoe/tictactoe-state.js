@@ -129,7 +129,8 @@ module.exports = function (injected) {
             illegalTurn: illegalTurn,
             illegalMove: illegalMove,
             winScenarios: winScenarios,
-            drawScenarios: drawScenarios
+            drawScenarios: drawScenarios,
+            gameFull: gameFull
         }
     };
 };

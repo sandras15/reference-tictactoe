@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="join game command" timestamp="2016-12-19T00:09:39" hostname="localhost" time="0.001" errors="0" tests="2" skipped="0" disabled="0" failures="2">
+  <testcase classname="join game command" name="should emit game joined event..." time="0.001">
+   <failure type="exception" message="TypeError: gameState.gameFull is not a function"><![CDATA[TypeError: gameState.gameFull is not a function
+    at Object.JoinGame (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/server/socket-app/tictactoe/tictactoe-handler.js:27:38)
+    at Object.executeCommand (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/server/socket-app/tictactoe/tictactoe-handler.js:116:38)
+    at Object.<anonymous> (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/server/socket-app/tictactoe/tictactoe-game.spec.js:88:26)
+    at attemptSync (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1950:24)
+    at QueueRunner.run (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1938:9)
+    at QueueRunner.execute (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1923:10)
+    at Spec.queueRunnerFactory (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:714:35)
+    at Spec.execute (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:371:10)
+    at Object.fn (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2579:37)
+    at attemptAsync (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1980:24)]]>
+   </failure>
+  </testcase>
+  <testcase classname="join game command" name="should emit FullGameJoinAttempted event when game full.." time="0">
+   <failure type="exception" message="TypeError: gameState.gameFull is not a function"><![CDATA[TypeError: gameState.gameFull is not a function
+    at Object.JoinGame (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/server/socket-app/tictactoe/tictactoe-handler.js:27:38)
+    at Object.executeCommand (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/server/socket-app/tictactoe/tictactoe-handler.js:116:38)
+    at Object.<anonymous> (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/server/socket-app/tictactoe/tictactoe-game.spec.js:88:26)
+    at attemptSync (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1950:24)
+    at QueueRunner.run (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1938:9)
+    at QueueRunner.execute (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1923:10)
+    at Spec.queueRunnerFactory (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:714:35)
+    at Spec.execute (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:371:10)
+    at Object.fn (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2579:37)
+    at attemptAsync (/Users/SandraOspStefansdottir/Desktop/reference-tictactoe/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1980:24)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>

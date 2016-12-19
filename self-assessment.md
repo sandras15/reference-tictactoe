@@ -5,26 +5,29 @@ Game URL (AWS)
 
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
 
-- Docker build: buildDocker.sh
+- Docker build: _/buildDocker.sh_
 	- __Purpose:__ 
 
-- Docker compose: docker-compose-and-run.sh
+- Docker compose: _/scripts/docker-compose.yaml_
 	- __Purpose:__ 
 
-- AWS Provisioning: provision-new-enviroment.sh (Not implemented fully)
+- Docker compose and run: _/scripts/docker-compose-and-run.sh_
 	- __Purpose:__ 
 
-- Cleaning images: cleanImages.sh
+- AWS Provisioning: _/provisioning/provision-new-enviroment.sh_ (Not implemented fully)
 	- __Purpose:__ 
 
-- Cleaning containers: scripts/cleanContainers.sh
+- Cleaning images: _/scripts/removeImages.sh_
 	- __Purpose:__ 
 
-- Git Commit script: gitCommit.sh
+- Cleaning containers: _/scripts/removeContainers.sh_
 	- __Purpose:__ 
 
-- Docker Connect:  
+- Git Commit script: _/gitCommit.sh_
 	- __Purpose:__ 
+
+- Docker Connect:  ubuntu@i-f1efa454:~/dockerConnect.sh/
+	- __Purpose:__ Connect the ubuntu machine to Docker.
 
 
 
@@ -48,7 +51,9 @@ Outline what tests you created.
 
 Did you create a data migration.
 
-- Migration up and down
+- Migration up and down: Yes!
+	- A new file was created called _2016121412231-add-column-aggregate-id.js_
+	- __Purpose:__ To add a column to the eventlog table that already exists.
 
 
 
@@ -58,11 +63,11 @@ Do you have the following Jobs and what happens in each Job:
 
 - Commit Stage: Yes! 
 
-- Acceptance Stage
+- Acceptance Stage: Nope.
 
-- Capacity Stage
+- Capacity Stage: Nope.
 
-- Pipl
+- Pipline: Yes!
 
 
 

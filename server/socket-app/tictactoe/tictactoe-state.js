@@ -38,11 +38,12 @@ module.exports = function (injected) {
                 return(playersTurn = 'O');
             }
             else
-                return(player = 'X');
+                return(playersTurn = 'X');
+
         }
 
         function illegalTurn(event) {
-            if(player != playersTurn){
+            if(event.side != playersTurn){
                 return true; //Illegal turn if you just put ypurr symbpl down.
             }
             else
@@ -51,7 +52,7 @@ module.exports = function (injected) {
 
         function illegalMove(event) {
             console.debug(board);
-            if(board[event.pos] !== undefined){
+            if(board[event.pos] == 'X' || board[event.pos] == 'O'){
                 return true; //Illegal move if there is already an symbol in that pos.
             }
             else if(!(event.pos <= 0 && event.pos >= 8)){

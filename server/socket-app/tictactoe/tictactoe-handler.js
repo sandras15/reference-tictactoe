@@ -47,8 +47,19 @@ module.exports = function(injected){
                     "PlaceMove": function(cmd){
 
                         // Check here for conditions which prevent command from altering state
-
-                        if(gameState.illegalMove(cmd.pos)){ //Check illegal move func
+                        if(gameState.illegalTurn(cmd)){ //Check illegal turn func
+                            eventHandler( [{
+                                gameId: cmd.gameId,
+                                type: "NotYourMove",
+                                user: cmd.user,
+                                name: cmd.name,
+                                timeStamp: cmd.timeStamp,
+                                side: cmd.side
+                            }]);
+                            return;
+                        }
+                        
+                        else if(gameState.illegalMove(cmd)){ //Check illegal move func
                             eventHandler( [{
                                 gameId: cmd.gameId,
                                 type: "IllegalMove",
@@ -59,17 +70,7 @@ module.exports = function(injected){
                             }]);
                             return;
                         }
-                        if(gameState.illegalTurn(cmd.pos)){ //Check illegal turn func
-                            eventHandler( [{
-                                gameId: cmd.gameId,
-                                type: "IllegalTurn",
-                                user: cmd.user,
-                                name: cmd.name,
-                                timeStamp: cmd.timeStamp,
-                                side: cmd.side
-                            }]);
-                            return;
-                        }
+                        
 
                         events.push([{
                             gameId: cmd.gameId,

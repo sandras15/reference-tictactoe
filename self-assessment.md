@@ -91,9 +91,10 @@ Jobs:
 	- Code in configuration: <br />
 <br />
 
-		scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./docker-compose.yaml ec2-user@35.165.28.215:~/docker-compose.yaml
-		scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./.env ec2-user@35.165.28.215:~/.env
-		ssh -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ec2-user@35.165.28.215 ./docker-compose-and-run.sh
+
+	scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./docker-compose.yaml ec2-user@35.165.28.215:~/docker-compose.yaml
+	scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./.env ec2-user@35.165.28.215:~/.env
+	ssh -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ec2-user@35.165.28.215 ./docker-compose-and-run.sh
 
 
 

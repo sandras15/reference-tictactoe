@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "updated self-assessment.md"
+git commit -m "removed unused file"
 git push origin master

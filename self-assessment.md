@@ -89,12 +89,9 @@ Jobs:
 	- __URL:__ http://82.221.49.109:8080/job/TicTacToe_Deploy/ 
 	- The following job deploys the image created in the Commit Stage over to the amazon server(AWS) and makes a secure copy of neccasary files over to AWS server also.
 	- Code in configuration: <br />
-<br />
-
-
-	scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./docker-compose.yaml ec2-user@35.165.28.215:~/docker-compose.yaml
-	scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./.env ec2-user@35.165.28.215:~/.env
-	ssh -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ec2-user@35.165.28.215 ./docker-compose-and-run.sh
+		scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./docker-compose.yaml ec2-user@35.165.28.215:~/docker-compose.yaml <br />
+		scp -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ./.env ec2-user@35.165.28.215:~/.env <br />
+		ssh -o StrictHostKeyChecking=no -i "../sandras15-ec2-key-pair-oregon.pem" ec2-user@35.165.28.215 ./docker-compose-and-run.sh <br />
 
 
 

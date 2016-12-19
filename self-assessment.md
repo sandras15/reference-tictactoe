@@ -14,27 +14,29 @@ Here is a link to another repository. The repository is private but Hannes and G
 
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
 
-- Docker build: _/buildDocker.sh_
-	- __Purpose:__ 
+- __Docker build:__ _/buildDocker.sh_
+	- Purpose:
 
-- Docker compose: _/scripts/docker-compose.yaml_
-	- __Purpose:__ 
+- __Docker compose:__ _/scripts/docker-compose.yaml_
+	- Purpose:
 
 - Docker compose and run: _/scripts/docker-compose-and-run.sh_
-	- __Purpose:__ 
+	- Purpose: 
 
 - AWS Provisioning: _/provisioning/provision-new-enviroment.sh_ (Not implemented fully)
-	- __Purpose:__ 
+	- Purpose:
 
 - Cleaning images: _/scripts/removeImages.sh_
-	- __Purpose:__ 
+	- Purpose:
 
 - Cleaning containers: _/scripts/removeContainers.sh_
-	- __Purpose:__ 
+	- Purpose: 
 
 - Server Run: 
+	- Purpose:
 
 - Connect Database: 
+	-Purpose:
 
 - Git Commit script: _/gitCommit.sh_
 	- __Purpose:__ 

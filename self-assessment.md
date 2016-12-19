@@ -35,20 +35,20 @@ Outline what script files you created and the purpose of each file. Each file sh
 
 Outline what tests you created.
 
-- Implemented UnitTests
-	1. should emit game created event
-	2. should emit game joined event
-	3. should emit FullGameJoinAttempted event when game full
-	4. should emit MovePlaced on first game move
-	5. should emit IllegalMove when square is already occupied
-	6. should emit NotYourMove if attempting to make move out of turn
-	7. should emit game won horizontally
-	8. should emit game won vertically
-	9. should emit game won sideways \
-	10. should emit game won sideways /
-	11. should not emit game draw if won on last move
-	12. should emit game draw when neither wins
-	13. should emit IllegalMove when square is already occupied
+- Implemented UnitTests are the following:
+	1. _should emit game created event_
+	2. _should emit game joined event_
+	3. _should emit FullGameJoinAttempted event when game full_
+	4. _should emit MovePlaced on first game move_
+	5. _should emit IllegalMove when square is already occupied_
+	6. _should emit NotYourMove if attempting to make move out of turn_
+	7. _should emit game won horizontally_
+	8. _should emit game won vertically_
+	9. _should emit game won sideways \ _
+	10. _should emit game won sideways / _
+	11. _should not emit game draw if won on last move_
+	12. _should emit game draw when neither wins_
+	13. _should emit IllegalMove when square is already occupied_
 
 - Unfortunatly the game is not playable :pensive:.
 

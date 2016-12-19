@@ -53,7 +53,7 @@ module.exports = function (injected) {
             if(board[event.pos] != null){
                 return true; //Illegal move if there is already an symbol in that pos.
             }
-            else if(!(0 <= event.pos && event.pos >= 8)){
+            else if(!(event.pos <= 0 && event.pos >= 8)){
                 return true; //Illegal move if input pos is out of range.
             }
             else

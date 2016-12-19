@@ -1,14 +1,14 @@
 #Self Assesment
 
-##Another Repository:
+##Another Repository URL
 Here is a link to another repository. The repository is private but Hannes and Guðlaugur have access to it.
-* __URL:__ https://github.com/sandras15/hgop_sandras15
+* https://github.com/sandras15/hgop_sandras15
 
 ##Game URL (AWS)
 * http://35.165.28.215:80/
 
-##DockerHub Account
-* __URL:__ https://hub.docker.com/u/sandras15/
+##DockerHub Account URL
+* https://hub.docker.com/u/sandras15/
 
 ## Scripts
 

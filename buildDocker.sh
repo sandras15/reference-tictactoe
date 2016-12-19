@@ -1,26 +1,11 @@
 #!/bin/bash
 
-#echo Installing npm...       ##Write the message "Installing npm..."
-#sudo npm install -g nodemon  #Install at first
-#rm -rf node_modules
-#npm install
-
-#cd client
-#rm -rf node_modules
-#npm install
-
-#cd ..
-
-git clean -dfx       
-git stash            
-
-rm -rf node_modules   
+rm -rf node_modules
 npm install
-npm install jasmine^@2.5.2           
 
-cd client/
-rm -rf node_modules   
-npm install           
+cd client
+rm -rf node_modules
+npm install
 
 cd ..
 

@@ -70,13 +70,10 @@ Do you have the following Jobs and what happens in each Job:
 
 
 
-Did you use any of the following features in Jenkins?
+I used the following features in Jenkins:
+- __Pipeline__ :smiley:!
 
-- Schedule or commit hooks
-
-- Pipeline: Yes:smiley:!
-
-- Test reports: Yes:smiley:!
+- __Test reports__ :smiley:!
 
 
 
